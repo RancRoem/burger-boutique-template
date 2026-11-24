@@ -1,7 +1,8 @@
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import MenuSection from "@/components/MenuSection";
-import AboutAndReservation from "@/components/AboutAndReservation";
+import AboutSection from "@/components/AboutSection";
+import ReservationSection from "@/components/ReservationSection";
 import Footer from "@/components/Footer";
 import CartDrawer from "@/components/CartDrawer";
 
@@ -12,7 +13,8 @@ export default function HomePage() {
       <main className="flex-1">
         <Hero />
         <MenuSection />
-        <AboutAndReservation />
+        <AboutSection />
+        <ReservationSection />
       </main>
       <Footer />
       <CartDrawer />
