@@ -13,6 +13,21 @@ import {
 } from "lucide-react";
 import { RESTAURANT_CONFIG } from "@/data/menuData";
 
+const GUEST_OPTIONS = Array.from({ length: 12 }, (_, i) => i + 1);
+
+const TIME_SLOTS = Array.of(
+  "12:00",
+  "13:00",
+  "17:30",
+  "18:00",
+  "18:30",
+  "19:00",
+  "19:30",
+  "20:00",
+  "20:30",
+  "21:00"
+);
+
 export default function AboutAndReservation() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
@@ -199,7 +214,7 @@ export default function AboutAndReservation() {
                         onChange={(e) => setGuests(Number(e.target.value))}
                         className="w-full pl-10 pr-4 py-3 bg-white/10 border border-white/15 rounded-xl text-sm text-white focus:outline-none focus:ring-2 focus:ring-brand-primary"
                       >
-                        {[1, 2, 3, 4, 5, 6, 7, 8, 10, 12].map((num) => (
+                        {GUEST_OPTIONS.map((num) => (
                           <option key={num} value={num} className="text-gray-900">
                             {num} {num === 1 ? "Guest" : "Guests"}
                           </option>
@@ -227,7 +242,3 @@ export default function AboutAndReservation() {
 
                   {/* Time */}
                   <div>
-                    <label className="block text-xs font-bold uppercase tracking-wider text-gray-400 mb-2">
-                      Time *
-                    </label>
-                    <div className="relative">
